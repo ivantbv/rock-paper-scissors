@@ -1,0 +1,46 @@
+<!DOCTYPE html> 
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Rock Paper Scissors</title>
+    </head>
+    <body>
+        <script>
+            function computerPlay() {
+                const rps = ['Rock', 'Paper', 'Scissors'];  
+                let randomChoice = rps[Math.floor(Math.random() * rps.length)]
+                return randomChoice;
+            }
+
+         function singleRound(playerSelection, computerSelection) {
+             computerSelection = computerPlay();
+
+           if (playerSelection === 'Scissors' && computerSelection === 'Rock') {
+                console.log('You lose! Rock beats scissors.');
+           } else if (playerSelection === 'Rock' && computerSelection === 'Paper') {
+               console.log('You lose! Paper beats rock.');
+           } else if (playerSelection === 'Paper' && computerSelection === 'Scissors') {
+               console.log('You lose! Scissors beat paper.');
+           } else if (playerSelection === 'Scissors' && computerSelection === 'Paper') {
+               console.log('You win! Scissors beat paper.');
+           } else if (playerSelection === 'Rock' && computerSelection === 'Scissors') {
+               console.log('You win! Rock beats scissors.');
+           } else if (playerSelection === 'Paper' && computerSelection === 'Rock') {
+               console.log('You win! Paper beats rock.');
+           } else {
+               console.log('Its a tie!')
+           }
+        //    function playerSelection(input) {
+        //     return input.toUpperCase() + input.slice(1).toLowerCase(length);
+        // }
+       return playerSelection;
+         }
+
+        
+        const playerSelection = 'Rock'
+        const computerSelection = computerPlay()
+        console.log(singleRound(playerSelection, computerSelection))
+
+        </script>
+    </body>
+</html>
