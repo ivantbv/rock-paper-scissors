@@ -5,25 +5,26 @@
         <title>Rock Paper Scissors</title>
     </head>
     <body>
+        <!-- <button class="r">Rock</button>
+        <button class="p">Paper</button>
+        <button class="s">Scissors</button> -->
 
-        <script>
-            function computerPlay() {
-                let rps = ['Rock', 'Paper', 'Scissors']
-              
-                if (rps) { for (let i = 0; i < rps.length; i++) {
-                console.log(rps[i])
-                }
-                }
-                let searchTerm = rps;
-               let result = rps.indexOf(searchTerm);
-               // let result = Math.floor(Math.random() * ['Rock', 'Paper', 'Scissors']);
-                return result;
-            
+        <img src="images/rock.jpg" height="270px"class="r">
+        <img src="images/paper.jpg" height="270px"class="p">
+        <img src="images/scissors.jpg" height="270px"class="s">
 
-               
-                // let returnRandom = Math.random().toString(3).substr();
-                // return returnRandom;
-            }
+        <div class="container"></div>
+
+        <script src="script.js">
+        
         </script>
+<!-- Add a div for displaying results and change all of your console.logs into 
+    DOM methods. -->
+
+<!-- Display the running score, and announce a winner of the game once one player 
+    reaches 5 points.
+You will likely have to refactor (rework/rewrite) your original code to make it 
+work for this. That’s OK! Reworking old code is an important part of the programmer’s life. -->
+
     </body>
 </html>
