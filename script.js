@@ -33,7 +33,7 @@ div.textContent = `Player selected: ${playerSelection} | Computer selected: ${co
 ++playerScore
 container.appendChild(div);
 } else if (playerSelection == rps[0] && computerSelection == rps[2]) {
-div.textContent = `Player selected: ${playerSelection} | Computer selected: ${computerSelection} | ${winCondition}`;
+div.textContent = `Player selected: ${playerSelection} | Computer selected: ${computerSelection} |  ${winCondition}`;
 ++playerScore
 container.appendChild(div);
 } else if (playerSelection == rps[1] && computerSelection == rps[0]) {
@@ -48,7 +48,8 @@ container.appendChild(div);
 score.textContent = `Player score: ${playerScore} | Computer score: ${computerScore} | Ties: ${draw}`
 scoreDiv.appendChild(score);
 
-if (playerScore > computerScore && playerScore > draw) {
+if (click === 4) {
+if (playerScore > computerScore) {
     displayResult.textContent = 'You defeated the AI!';
     resultDiv.appendChild(displayResult);
 } else if (computerScore > playerScore) {
@@ -57,10 +58,9 @@ if (playerScore > computerScore && playerScore > draw) {
 } else {
     displayResult.textContent = 'Its a tie.';
     resultDiv.appendChild(displayResult);
-}
-
+    }
+   }
 }     
-
 
 const computerSelection = computerPlay();
 
@@ -89,7 +89,6 @@ function game() {
 }  
 
 
-
 const buttonR = document.querySelector('.r');
 const buttonP = document.querySelector('.p');
 const buttonS = document.querySelector('.s');
@@ -98,20 +97,57 @@ const div = document.createElement('div');
 div.style.fontWeight = 'bolder';
 div.style.fontSize = '20px';
 
-
+let click = 0;
 
 const clickR = buttonR.addEventListener('click', function() {
 let playerSelection = rps[0];
 singleRound(playerSelection)
+++click;
+
+    let stopClick = function() {
+    if (click > 5) {
+        displayResult.textContent = 'Reset for 5 new rounds!';
+    resultDiv.appendChild(displayResult);
+    buttonR.removeEventListener('click', stopClick);  
+}
+}
+stopClick();
 });
 
 const clickP = buttonP.addEventListener('click', function() {
 let playerSelection = rps[1];
-singleRound(playerSelection)
+singleRound(playerSelection);
+
+++click;
+
+    let stopClick = function() {
+    if (click > 5) {
+        displayResult.textContent = 'Reset for 5 new rounds!';
+    resultDiv.appendChild(displayResult);
+    buttonP.removeEventListener('click', stopClick);  
+}
+}
+stopClick();
 });
 
 const clickS = buttonS.addEventListener('click', function() {  
 let playerSelection = rps[2];
-singleRound(playerSelection)
+singleRound(playerSelection);
+
+++click;
+    let stopClick = function() {
+    if (click > 5) {
+        displayResult.textContent = 'Reset for 5 new rounds!';
+    resultDiv.appendChild(displayResult);
+    buttonS.removeEventListener('click', stopClick);  
+}
+}
+stopClick();
+
 });   
 
+//todo - make the created divs and p disappear when 5 rounds (clicks) have been
+//made
+
+
+   
