@@ -50,16 +50,28 @@ scoreDiv.appendChild(score);
 
 if (click === 4) {
 if (playerScore > computerScore) {
-    displayResult.textContent = 'You defeated the AI!';
+    displayResult.textContent = 'Nice! You broke the AI!';
     resultDiv.appendChild(displayResult);
 } else if (computerScore > playerScore) {
     displayResult.textContent = 'You have been terminated!';
     resultDiv.appendChild(displayResult);
 } else {
-    displayResult.textContent = 'Its a tie.';
+    displayResult.textContent = 'Its a tie. Roll again';
     resultDiv.appendChild(displayResult);
     }
    }
+
+   if (click > 4) {
+       div.textContent = '';
+       container.appendChild(div);
+   }
+
+   if (click > 4) {
+    score.textContent = '';
+    scoreDiv.appendChild(score);
+}
+
+
 }     
 
 const computerSelection = computerPlay();
@@ -68,25 +80,7 @@ const scoreDiv = document.querySelector('.score')
 const score = document.createElement('p')
 
 const resultDiv = document.querySelector('.count')
-const displayResult = document.createElement('p')
-
-function game() {  
-
-// for (let i = 0; i < 5; ++i) { 
-//     if (playerScore > computerScore) {
-//         score.textContent = `Player score: ${playerScore} | Computer score: ${computerScore} | Ties: ${draw}`
-// scoreDiv.appendChild(score);
-//     } else if (computerScore > playerScore) {
-//         score.textContent = `Player score: ${playerScore} | Computer score: ${computerScore} | Ties: ${draw}`
-// scoreDiv.appendChild(score);
-//     } else if (playerScore == computerScore) {
-//         score.textContent = `Player score: ${playerScore} | Computer score: ${computerScore} | Ties: ${draw}`
-// scoreDiv.appendChild(score);
-//     }
-// }
- 
-
-}  
+const displayResult = document.createElement('p') 
 
 
 const buttonR = document.querySelector('.r');
@@ -145,9 +139,6 @@ singleRound(playerSelection);
 stopClick();
 
 });   
-
-//todo - make the created divs and p disappear when 5 rounds (clicks) have been
-//made
 
 
    
