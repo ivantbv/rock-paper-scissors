@@ -16,54 +16,78 @@ function singleRound(playerSelection, computerSelection) {
 computerSelection = computerPlay();
 
 if (playerSelection == rps[2] && computerSelection == rps[0]) {
-div.textContent = `You selected ${playerSelection} but Computer selected ${computerSelection}. ${loseCondition}`;
-computerScore++
-return container.appendChild(div);
+div.textContent = `Player selected: ${playerSelection} | Computer selected: ${computerSelection} | ${loseCondition}`;
+++computerScore
+// return 
+container.appendChild(div);
 } else if (playerSelection == rps[0] && computerSelection == rps[1]) {
-div.textContent = `You selected ${playerSelection} but Computer selected ${computerSelection}. ${loseCondition}`;
-computerScore++
-return container.appendChild(div);
+div.textContent = `Player selected: ${playerSelection} | Computer selected: ${computerSelection} | ${loseCondition}`;
+++computerScore
+container.appendChild(div);
 } else if (playerSelection == rps[1] && computerSelection == rps[2]) {
-div.textContent = `You selected ${playerSelection} but Computer selected ${computerSelection}. ${loseCondition}`;
-computerScore++
-return container.appendChild(div);
+div.textContent = `Player selected: ${playerSelection} | Computer selected: ${computerSelection} | ${loseCondition}`;
+++computerScore
+container.appendChild(div);
 } else if (playerSelection == rps[2] && computerSelection == rps[1]) {
-div.textContent = `You selected ${playerSelection} and Computer selected ${computerSelection}. ${winCondition}`;
-return container.appendChild(div);
-playerScore++
+div.textContent = `Player selected: ${playerSelection} | Computer selected: ${computerSelection} | ${winCondition}`;
+++playerScore
+container.appendChild(div);
 } else if (playerSelection == rps[0] && computerSelection == rps[2]) {
-div.textContent = `You selected ${playerSelection} and Computer selected ${computerSelection}. ${winCondition}`;
-return container.appendChild(div);
-playerScore++
+div.textContent = `Player selected: ${playerSelection} | Computer selected: ${computerSelection} | ${winCondition}`;
+++playerScore
+container.appendChild(div);
 } else if (playerSelection == rps[1] && computerSelection == rps[0]) {
-div.textContent = `You selected ${playerSelection} and Computer selected ${computerSelection}. ${winCondition}`;
-return container.appendChild(div);
-playerScore++
+div.textContent = `Player selected: ${playerSelection} | Computer selected: ${computerSelection} | ${winCondition}`;
+++playerScore
+container.appendChild(div);
 } else {
 div.textContent = `You both selected ${computerSelection}. ${tie}`;
-return container.appendChild(div);
-draw++;
+++draw;
+container.appendChild(div);
 }
+score.textContent = `Player score: ${playerScore} | Computer score: ${computerScore} | Ties: ${draw}`
+scoreDiv.appendChild(score);
+
+if (playerScore > computerScore && playerScore > draw) {
+    displayResult.textContent = 'You defeated the AI!';
+    resultDiv.appendChild(displayResult);
+} else if (computerScore > playerScore) {
+    displayResult.textContent = 'You have been terminated!';
+    resultDiv.appendChild(displayResult);
+} else {
+    displayResult.textContent = 'Its a tie.';
+    resultDiv.appendChild(displayResult);
+}
+
 }     
 
-//const playerSelection = prompt('Rock, paper scissors?').toLowerCase();
+
 const computerSelection = computerPlay();
 
-function game() {   
+const scoreDiv = document.querySelector('.score')
+const score = document.createElement('p')
 
-// singleRound(prompt('Rock, paper or scissors?').toLowerCase());
-// console.log(`Player ${playerScore} : ${computerScore} Computer`)
+const resultDiv = document.querySelector('.count')
+const displayResult = document.createElement('p')
 
-//    if (playerScore > computerScore) {
-//        alert('You beat the computer in his own game!');
-//    } else if (computerScore > playerScore) {
-//        alert('You lost. Roll again!')
-//    } else if (playerScore == computerScore) {
-//        draw;
-//        console.log('Its a tie!')
-//    }
-}    
-//let playerSelection = '';
+function game() {  
+
+// for (let i = 0; i < 5; ++i) { 
+//     if (playerScore > computerScore) {
+//         score.textContent = `Player score: ${playerScore} | Computer score: ${computerScore} | Ties: ${draw}`
+// scoreDiv.appendChild(score);
+//     } else if (computerScore > playerScore) {
+//         score.textContent = `Player score: ${playerScore} | Computer score: ${computerScore} | Ties: ${draw}`
+// scoreDiv.appendChild(score);
+//     } else if (playerScore == computerScore) {
+//         score.textContent = `Player score: ${playerScore} | Computer score: ${computerScore} | Ties: ${draw}`
+// scoreDiv.appendChild(score);
+//     }
+// }
+ 
+
+}  
+
 
 
 const buttonR = document.querySelector('.r');
@@ -73,6 +97,8 @@ const container = document.querySelector('.container')
 const div = document.createElement('div');
 div.style.fontWeight = 'bolder';
 div.style.fontSize = '20px';
+
+
 
 const clickR = buttonR.addEventListener('click', function() {
 let playerSelection = rps[0];
@@ -88,3 +114,4 @@ const clickS = buttonS.addEventListener('click', function() {
 let playerSelection = rps[2];
 singleRound(playerSelection)
 });   
+
