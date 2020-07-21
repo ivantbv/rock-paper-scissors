@@ -7,40 +7,54 @@ body {
     padding-right: 20px;
     padding-bottom: 30px;
 
-    background: rgb(2,0,36);
-    background: linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(193,188,172,0.99) 0%, rgba(194,203,229,1) 58%); 
+    background: rgb(238,174,202);
+    background: radial-gradient(circle, rgba(238,174,202,.7) 0%, rgba(148,187,233,0.651727414598652) 78%); 
     /* background-repeat: no-repeat; */
 }
 
 .tocenter { 
     padding: 100px;
     
-    border: 2px solid black;
+    border: 3px solid rgb(136, 101, 113);
     float: inline-end;
 
     padding-left: 80px;
     padding-right: 80px;
-    border-right-width: 5px;
-    border-left-width: 5px;
-    border-top-width: 4px;
+    border-right-width: 3px;
+    border-left-width: 3px;
+    border-top-width: 3px;
     width: 888.348;
-    border-bottom-width: 7px;
+    border-bottom-width: 3px;
 
     padding-top: 30px;
     padding-bottom: 400px;
 }
 
+.reset {
+    cursor: pointer;
+    border-radius: 50%;
+    -webkit-transition: -webkit-transform .9s ease-in-out;
+            transition:         transform .9s ease-in-out;
+}
+
+.reset:hover {
+    -webkit-transform: rotate(-360deg);
+            transform: rotate(-360deg);
+}
+
 #players {
-display: flex;
+    display: flex;
     justify-content: space-between;
     padding-left: 30px;
     padding-right: 30px;
+
+    font-size: 1.6vw;
+    font-weight: bolder;
 }
 .images {
    float: left;
    display: grid;
 }
-
 
 .r, .p, .s {
     cursor: pointer;
