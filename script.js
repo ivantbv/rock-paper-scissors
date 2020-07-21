@@ -17,28 +17,28 @@ function singleRound(playerSelection, computerSelection) {
 computerSelection = computerPlay();
 
 if (playerSelection == rps[2] && computerSelection == rps[0]) {
-div.textContent = `Player: ${playerSelection} | Computer: ${computerSelection}`;
+div.textContent = ` > ${playerSelection}   |   |   ${computerSelection} <`;
 ++computerScore
 // return 
 container.appendChild(div);
 } else if (playerSelection == rps[0] && computerSelection == rps[1]) {
-div.textContent = `Player: ${playerSelection} | Computer: ${computerSelection}`;
+div.textContent = ` > ${playerSelection}   |   |   ${computerSelection} <`;
 ++computerScore
 container.appendChild(div);
 } else if (playerSelection == rps[1] && computerSelection == rps[2]) {
-div.textContent = `Player: ${playerSelection} | Computer: ${computerSelection}`;
+div.textContent = ` > ${playerSelection}   |   |   ${computerSelection} <`;
 ++computerScore
 container.appendChild(div);
 } else if (playerSelection == rps[2] && computerSelection == rps[1]) {
-div.textContent = `Player: ${playerSelection} | Computer: ${computerSelection}`;
+div.textContent = `> ${playerSelection}   |   |   ${computerSelection} <`;
 ++playerScore
 container.appendChild(div);
 } else if (playerSelection == rps[0] && computerSelection == rps[2]) {
-div.textContent = `Player: ${playerSelection} | Computer: ${computerSelection}`;
+div.textContent = `> ${playerSelection}   |   |   ${computerSelection} <`;
 ++playerScore
 container.appendChild(div);
 } else if (playerSelection == rps[1] && computerSelection == rps[0]) {
-div.textContent = `Player: ${playerSelection} | Computer: ${computerSelection}`;
+div.textContent = `> ${playerSelection}   |   |   ${computerSelection} <`;
 ++playerScore
 container.appendChild(div);
 } else {

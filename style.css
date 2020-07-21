@@ -1,7 +1,7 @@
 body {
     margin: 10vw;
     margin-top: 50px;
-    margin-bottom: 60px;
+    margin-bottom: 50px;
 
     padding-left: 20px;
     padding-right: 20px;
@@ -20,12 +20,14 @@ body {
 
     padding-left: 80px;
     padding-right: 80px;
-    padding-bottom: 550px;
     border-right-width: 5px;
     border-left-width: 5px;
     border-top-width: 4px;
     width: 888.348;
     border-bottom-width: 7px;
+
+    padding-top: 30px;
+    padding-bottom: 400px;
 }
 
 #players {
@@ -76,4 +78,18 @@ display: flex;
     align-items: center;
     text-align: center;
 
+    /* padding-top: 120px; */
+    /* margin-top: 120px; */
+}
+
+.score {
+    text-align: center;
+}
+
+#high {
+    margin-bottom: 120px;
+}
+
+.count {
+    text-align: center;
 }
