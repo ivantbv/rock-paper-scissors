@@ -3,37 +3,43 @@
     <head>
         <meta charset="UTF-8">
         <title>Rock Paper Scissors</title>
+        <link rel="stylesheet" href="style.css">
     </head>
-    <body>
-        <!-- <button class="r">Rock</button>
-        <button class="p">Paper</button>
-        <button class="s">Scissors</button> -->
-        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-refresh" width="64" height="64" viewBox="0 0 24 24" stroke-width="1.5" stroke="#795548" fill="none" stroke-linecap="round" stroke-linejoin="round">
-            <path stroke="none" d="M0 0h24v24H0z"/>
-            <path d="M20 11a8.1 8.1 0 0 0 -15.5 -2m-.5 -5v5h5" />
-            <path d="M4 13a8.1 8.1 0 0 0 15.5 2m.5 5v-5h-5" />
-          </svg>
-          <br>
-        <img src="images/rock.jpg" height="270px"class="r">
-        <img src="images/paper.jpg" height="270px"class="p">
-        <img src="images/scissors.jpg" height="270px"class="s">
+    <body>   
 
-        <div class="container"></div>
+        <div class="tocenter">
+            <div id="players">
+                <p>Player</p>
+                <span class="reset">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-refresh" width="64" height="64" viewBox="0 0 24 24" stroke-width="1.5" stroke="#795548" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z"/>
+                        <path d="M20 11a8.1 8.1 0 0 0 -15.5 -2m-.5 -5v5h5" />
+                        <path d="M4 13a8.1 8.1 0 0 0 15.5 2m.5 5v-5h-5" />
+                      </svg>
+                    </span>
+                <p>Computer</p>
+            </div>
+          <span class="images">
+        <img src="images/rock.jpg" height="160px"class="r" alt="rock">
+        <img src="images/paper.jpg" height="160px"class="p" alt="paper">
+        <img src="images/scissors.jpg" height="160px"class="s" alt="scissors">
+          </span>
+
+          <span class="imagesAI">
+            <img src="images/rock.jpg" height="160px"class="AI" alt="AI-rock">
+            <img src="images/paper.jpg" height="160px"class="AI" alt="AI-paper">
+            <img src="images/scissors.jpg" height="160px"class="AI" alt="AI-scissors">
+              </span>                
+            </div>
+
+        <span class="container"></span>
 
         <div class="score" style="color: crimson;"></div>
         
         <div class="count"></div>
         
         <script src="script.js">
-
-
-        
         </script>
-
-<!-- Display the running score, and announce a winner of the game once one player 
-    reaches 5 points.
-You will likely have to refactor (rework/rewrite) your original code to make it 
-work for this. That’s OK! Reworking old code is an important part of the programmer’s life. -->
 
     </body>
 </html>

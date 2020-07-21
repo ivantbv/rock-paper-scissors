@@ -2,6 +2,7 @@ let rps = ['Rock', 'Paper', 'Scissors'];
 let playerScore = 0;
 let computerScore = 0;
 let draw = 0;
+let click = 0;
 
 let loseCondition = 'You lose!';
 let winCondition = 'You win!';
@@ -16,28 +17,28 @@ function singleRound(playerSelection, computerSelection) {
 computerSelection = computerPlay();
 
 if (playerSelection == rps[2] && computerSelection == rps[0]) {
-div.textContent = `Player selected: ${playerSelection} | Computer selected: ${computerSelection} | ${loseCondition}`;
+div.textContent = `Player: ${playerSelection} | Computer: ${computerSelection}`;
 ++computerScore
 // return 
 container.appendChild(div);
 } else if (playerSelection == rps[0] && computerSelection == rps[1]) {
-div.textContent = `Player selected: ${playerSelection} | Computer selected: ${computerSelection} | ${loseCondition}`;
+div.textContent = `Player: ${playerSelection} | Computer: ${computerSelection}`;
 ++computerScore
 container.appendChild(div);
 } else if (playerSelection == rps[1] && computerSelection == rps[2]) {
-div.textContent = `Player selected: ${playerSelection} | Computer selected: ${computerSelection} | ${loseCondition}`;
+div.textContent = `Player: ${playerSelection} | Computer: ${computerSelection}`;
 ++computerScore
 container.appendChild(div);
 } else if (playerSelection == rps[2] && computerSelection == rps[1]) {
-div.textContent = `Player selected: ${playerSelection} | Computer selected: ${computerSelection} | ${winCondition}`;
+div.textContent = `Player: ${playerSelection} | Computer: ${computerSelection}`;
 ++playerScore
 container.appendChild(div);
 } else if (playerSelection == rps[0] && computerSelection == rps[2]) {
-div.textContent = `Player selected: ${playerSelection} | Computer selected: ${computerSelection} |  ${winCondition}`;
+div.textContent = `Player: ${playerSelection} | Computer: ${computerSelection}`;
 ++playerScore
 container.appendChild(div);
 } else if (playerSelection == rps[1] && computerSelection == rps[0]) {
-div.textContent = `Player selected: ${playerSelection} | Computer selected: ${computerSelection} | ${winCondition}`;
+div.textContent = `Player: ${playerSelection} | Computer: ${computerSelection}`;
 ++playerScore
 container.appendChild(div);
 } else {
@@ -70,8 +71,6 @@ if (playerScore > computerScore) {
     score.textContent = '';
     scoreDiv.appendChild(score);
 }
-
-
 }     
 
 const computerSelection = computerPlay();
@@ -82,7 +81,6 @@ const score = document.createElement('p')
 const resultDiv = document.querySelector('.count')
 const displayResult = document.createElement('p') 
 
-
 const buttonR = document.querySelector('.r');
 const buttonP = document.querySelector('.p');
 const buttonS = document.querySelector('.s');
@@ -90,8 +88,6 @@ const container = document.querySelector('.container')
 const div = document.createElement('div');
 div.style.fontWeight = 'bolder';
 div.style.fontSize = '20px';
-
-let click = 0;
 
 const clickR = buttonR.addEventListener('click', function() {
 let playerSelection = rps[0];
@@ -137,8 +133,14 @@ singleRound(playerSelection);
 }
 }
 stopClick();
-
 });   
 
+const resetIcon = document.querySelector('.reset');
+
+const reset = resetIcon.addEventListener('click', function() {
+    // displayResult.textContent = '';
+    // resultDiv.appendChild(displayResult);
+    window.location.reload(false);
+})
 
    
