@@ -1,6 +1,6 @@
 body {
     margin: 10vw;
-    margin-top: 50px;
+    margin-top: 30px;
     margin-bottom: 50px;
     
     display: flex;
@@ -20,7 +20,7 @@ body {
     float: inline-end;
     padding-left: 80px;
     padding-right: 80px;
-    border-width: 10px;
+    border-width: 6px;
     width: 888.348;
     padding-top: 30px;
 
