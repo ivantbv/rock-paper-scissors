@@ -1,13 +1,13 @@
 body {
     margin: 10vw;
-    margin-top: 30px;
-    margin-bottom: 50px;
+    margin-top: 15px;
+    margin-bottom: 40px;
     
     display: flex;
     justify-content: center;
     align-items:center;
 
-    padding-bottom: 30px;
+    padding-bottom: 1px;
     background: rgb(238,174,202);
     background: radial-gradient(circle, rgba(238,174,202,.7) 0%, rgba(148,187,233,0.651727414598652) 78%); 
     background-repeat: no-repeat;
@@ -23,6 +23,7 @@ body {
     border-width: 6px;
     width: 888.348;
     padding-top: 30px;
+    padding-bottom: 60px;
 
     width: 900px;
     border-radius: 8px;
