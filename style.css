@@ -2,15 +2,16 @@ body {
     margin: 10vw;
     margin-top: 50px;
     margin-bottom: 50px;
+    
+    display: flex;
+    justify-content: center;
+    align-items:center;
 
-    padding-left: 20px;
-    padding-right: 20px;
     padding-bottom: 30px;
-
     background: rgb(238,174,202);
-    background: -o-radial-gradient(circle, rgba(238,174,202,.7) 0%, rgba(148,187,233,0.651727414598652) 78%);
     background: radial-gradient(circle, rgba(238,174,202,.7) 0%, rgba(148,187,233,0.651727414598652) 78%); 
     background-repeat: no-repeat;
+    
 }
 
 .tocenter { 
@@ -25,32 +26,28 @@ body {
     width: 888.348;
     border-bottom-width: 3px;
     padding-top: 30px;
-    padding-bottom: 400px;
+
+    width: 900px;
+    border-radius: 8px;
+
+    box-shadow:15px 15px 15px 10px grey; 
 }
 
 .reset {
     cursor: pointer;
     border-radius: 50%;
     -webkit-transition: -webkit-transform .9s ease-in-out;
-            transition:         -webkit-transform .9s ease-in-out;
-            -o-transition:         transform .9s ease-in-out;
             transition:         transform .9s ease-in-out;
-            transition:         transform .9s ease-in-out, -webkit-transform .9s ease-in-out;
 }
 
 .reset:hover {
     -webkit-transform: rotate(-360deg);
-            -ms-transform: rotate(-360deg);
-        transform: rotate(-360deg);
+            transform: rotate(-360deg);
 }
 
 #players {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    justify-content: space-between;
     padding-left: 30px;
     padding-right: 27px;
     
@@ -60,45 +57,31 @@ body {
 }
 .images {
    float: left;
-   display: -ms-grid;
    display: grid;
 }
 
 .r, .p, .s {
     cursor: pointer;
     padding: 3.5px;
-
-    -webkit-transition: -webkit-box-shadow .3s;
-
-    transition: -webkit-box-shadow .3s;
-
-    -o-transition: box-shadow .3s;
-
     transition: box-shadow .3s;
-
-    transition: box-shadow .3s, -webkit-box-shadow .3s;
     border-radius:8px;
     border: 0.5px solid #ccc;
 }
 
 .r:hover {
-    -webkit-box-shadow: 0 0 5px rgba(33,33,33,.9);
-            box-shadow: 0 0 5px rgba(33,33,33,.9); 
+    box-shadow: 0 0 5px rgba(33,33,33,.9); 
 }
 
 .p:hover {
-    -webkit-box-shadow: 0 0 5px rgba(33,33,33,.9);
-            box-shadow: 0 0 5px rgba(33,33,33,.9); 
+    box-shadow: 0 0 5px rgba(33,33,33,.9); 
 }
 
 .s:hover {
-    -webkit-box-shadow: 0 0 5px rgba(33,33,33,.9);
-            box-shadow: 0 0 5px rgba(33,33,33,.9); 
+    box-shadow: 0 0 5px rgba(33,33,33,.9); 
 }
 
 .imagesAI {
     float: right;
-    display: -ms-grid;
     display: grid;
 }
 
@@ -108,12 +91,8 @@ body {
 
 .container {
     display: block;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    justify-content: center;
+    align-items: center;
     text-align: center;
     text-align: center;
     padding-top: 20px;
