@@ -9,5 +9,6 @@ Play the school classic Rock-Paper-Scissors game versus the computer.
 -Live score tracking
 
 Made with javascript
+
 Live: https://ivantbv.github.io/rock-paper-scissors/
 
